@@ -103,7 +103,7 @@ class SouthAfrica(WesternCalendar, ChristianMixin):
 
     FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
         (5, 1, "Workers Day"),
-        (12, 16, "Day of reconcilation"),
+        (12, 16, "Day of reconciliation"),
     )
 
     def get_family_day(self, year):
