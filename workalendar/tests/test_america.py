@@ -147,6 +147,7 @@ class PanamaTest(GenericCalendarTest):
         holidays = self.cal.holidays_set(2013)
         self.assertIn(date(2013, 1, 1), holidays)
         self.assertIn(date(2013, 1, 9), holidays)  # Martyrs day
+        self.assertIn(date(2013, 2, 11), holidays)  # carnival monday
         self.assertIn(date(2013, 2, 12), holidays)  # carnival tuesday
         self.assertIn(date(2013, 3, 29), holidays)  # good friday
         self.assertIn(date(2013, 3, 30), holidays)  # easter saturday
