@@ -202,7 +202,8 @@ class Panama(WesternCalendar, ChristianMixin):
         (1, 9, "Martyrs' Day"),
         (5, 1, "Labour Day"),
         (11, 3, "Independence Day"),
-        (11, 5, "Colon Day"),
+        (11, 4, "Flag Day"),
+        (11, 5, "Colón Day"),
         (11, 10, "Shout in Villa de los Santos"),
         (12, 8, "Mothers' Day"),
     )
