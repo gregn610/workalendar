@@ -211,6 +211,9 @@ class Panama(WesternCalendar, ChristianMixin):
     def get_variable_days(self, year):
         days = super(Panama, self).get_variable_days(year)
         days.append(
-            (self.get_ash_wednesday(year) - timedelta(days=1), "Carnival")
+            (self.get_ash_wednesday(year) - timedelta(days=2), "Carnival Monday")
+        )
+        days.append(
+            (self.get_ash_wednesday(year) - timedelta(days=1), "Carnival Tuesday")
         )
         return days
