@@ -196,7 +196,7 @@ class Panama(WesternCalendar, ChristianMixin):
     "Panama"
     include_good_friday = True
     include_easter_saturday = True
-    include_easter_sunday = True
+    #include_easter_sunday = True
 
     FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
         (1, 9, "Martyrs' Day"),
