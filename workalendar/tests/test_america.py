@@ -150,7 +150,7 @@ class PanamaTest(GenericCalendarTest):
         self.assertIn(date(2013, 2, 12), holidays)  # carnival tuesday
         self.assertIn(date(2013, 3, 29), holidays)  # good friday
         self.assertIn(date(2013, 3, 30), holidays)  # easter saturday
-        self.assertIn(date(2013, 3, 31), holidays)  # easter sunday
+        self.assertNotIn(date(2013, 3, 31), holidays)  # easter sunday
         self.assertIn(date(2013, 5, 1), holidays)  # labour day
         self.assertIn(date(2013, 11, 3), holidays)  # independence day
         self.assertIn(date(2013, 11, 5), holidays)  # colon day
