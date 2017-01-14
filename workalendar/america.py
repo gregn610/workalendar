@@ -208,6 +208,13 @@ class Panama(WesternCalendar, ChristianMixin):
         (12, 8, "Mothers' Day"),
     )
 
+    def get_presidential_inauguration(self, year):
+        """Might return empty"""
+        days = []
+        if year % 5 == 4:
+            days.append((date(year, 7, 1), "Presidential Inauguration"))
+        return days
+
     def get_variable_days(self, year):
         days = super(Panama, self).get_variable_days(year)
         days.append(
@@ -216,4 +223,9 @@ class Panama(WesternCalendar, ChristianMixin):
         days.append(
             (self.get_ash_wednesday(year) - timedelta(days=1), "Carnival Tuesday")
         )
+        # http://web.archive.org/web/20140220013335/http://panama.usembassy.gov/holidays.html
+        days.append(
+            (self.get_first_weekday_after(date(year, 11, 28), 0), "Independence from Spain")
+        )
+        days.extend(self.get_presidential_inauguration(year))
         return days
