@@ -204,7 +204,6 @@ class Panama(WesternCalendar, ChristianMixin):
         (11, 3, "Independence Day"),
         (11, 5, "Colon Day"),
         (11, 10, "Shout in Villa de los Santos"),
-        (12, 2, "Independence from Spain"),
         (12, 8, "Mothers' Day"),
     )
 
@@ -212,5 +211,9 @@ class Panama(WesternCalendar, ChristianMixin):
         days = super(Panama, self).get_variable_days(year)
         days.append(
             (self.get_ash_wednesday(year) - timedelta(days=1), "Carnival")
+        )
+        # http://web.archive.org/web/20140220013335/http://panama.usembassy.gov/holidays.html
+        days.append(
+            (self.get_first_weekday_after(date(year, 11, 28), 0), "Independence from Spain")
         )
         return days
