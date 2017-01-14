@@ -160,3 +160,7 @@ class PanamaTest(GenericCalendarTest):
         self.assertIn(date(2013, 12, 2), holidays)  # Independence from spain
         self.assertIn(date(2013, 12, 8), holidays)  # mother day
         self.assertIn(date(2013, 12, 25), holidays)  # XMas
+
+    def test_presidental_inaug(self):
+        holidays = self.cal.holidays_set(2014)
+        self.assertIn(date(2014, 7, 1), holidays)
