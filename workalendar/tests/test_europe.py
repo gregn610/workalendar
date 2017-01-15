@@ -17,6 +17,7 @@ from workalendar.europe import Hungary
 from workalendar.europe import Iceland
 from workalendar.europe import Ireland
 from workalendar.europe import Italy
+from workalendar.europe import Lithuania
 from workalendar.europe import Luxembourg
 from workalendar.europe import Netherlands
 from workalendar.europe import Norway
@@ -491,6 +492,29 @@ class ItalyTest(GenericCalendarTest):
         self.assertIn(date(2013, 12, 8), holidays)  # immaculate Conception
         self.assertIn(date(2013, 12, 25), holidays)  # christmas
         self.assertIn(date(2013, 12, 26), holidays)  # San Stefano
+
+
+class Lithuania(GenericCalendarTest):
+
+    cal_class = Lithuania
+
+    def test_year_2017(self):
+        holidays = self.cal.holidays_set(2017)
+        self.assertIn(date(2017, 1, 1), holidays)  # New Year's Day
+        self.assertIn(date(2017, 2, 16), holidays)  # Restoration
+        self.assertIn(date(2017, 3, 11), holidays)  # Independence of Lithuania
+        self.assertIn(date(2017, 4, 16), holidays)  # Easter Sunday
+        self.assertIn(date(2017, 4, 17), holidays)  # Easter Monday
+        self.assertIn(date(2017, 5, 1), holidays)  # International Working Day
+        self.assertIn(date(2017, 5, 7), holidays)  # Mother's Day
+        self.assertIn(date(2017, 6, 4), holidays)  # Father's Day
+        self.assertIn(date(2017, 6, 24), holidays)  # St. John's Day
+        self.assertIn(date(2017, 7, 6), holidays)  # Statehood Day
+        self.assertIn(date(2017, 8, 15), holidays)  # Assumption Day
+        self.assertIn(date(2017, 11, 1), holidays)  # All Saints' Day
+        self.assertIn(date(2017, 12, 24), holidays)  # Christmas Eve
+        self.assertIn(date(2017, 12, 25), holidays)  # Christmas
+        self.assertIn(date(2017, 12, 26), holidays)  # Christmas
 
 
 class LuxembourgTest(GenericCalendarTest):
